@@ -5,12 +5,11 @@ pipeline {
 	stages {
 		stage('Test') {
 			steps {
-				sh 'python3 -m venv env'
 				sh 'apt update'
 				sh 'apt install net-tools'
 				sh 'ifconfig'
 				sh 'pwd'
-				sh 'apt install python3 && . env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
+				sh 'apt install python3 && python3 -m venv env && . env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
 			}
 		}
 		stage('Deploy') {
