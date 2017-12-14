@@ -9,5 +9,10 @@ pipeline {
 				sh 'hostname'
 			}
 		}
+		stage('Deploy') {
+			steps {
+				sh 'echo "deploy"'
+			}
+		}
 	}
 }
