@@ -7,6 +7,7 @@ pipeline {
 				sh '. env/bin/activate'
 				sh 'pip install flask'
 				sh 'FLASK_APP=task.py flask run&'
+				sh 'sleep 5000'
 			}
 		}
 		stage('Deploy') {
