@@ -9,7 +9,8 @@ pipeline {
 				sh 'apt update'
 				sh 'apt install net-tools'
 				sh 'ifconfig'
-				sh '. env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
+				sh 'pwd'
+				sh 'apt install python3 && . env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
 			}
 		}
 		stage('Deploy') {
