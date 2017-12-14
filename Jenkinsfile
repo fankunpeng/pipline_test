@@ -1,12 +1,15 @@
 pipeline {
 	agent {
-		docker {image "python"}
+		docker {
+			image "python"
+		}
 	}
 	stages {
 		stage('Test') {
 			steps {
-				sh 'hostname'
 				sh 'pwd'
+				sh 'ls'
+				sh 'hostname'
 			}
 		}
 		stage('Deploy') {
