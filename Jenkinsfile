@@ -5,9 +5,10 @@ pipeline {
 	stages {
 		stage('Test') {
 			steps {
-				sh 'node --version'
-				sh 'hostname'
+				sh 'g++ hello.cpp'
+         			sh './a.out'
 				sh 'pwd'
+				sh 'hostname'
 			}
 		}
 	}
