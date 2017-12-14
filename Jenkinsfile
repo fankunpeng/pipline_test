@@ -5,8 +5,7 @@ pipeline {
 	stages {
 		stage('Test') {
 			steps {
-				sh 'sudo apt-get install python3'
-				sh 'virtualenv -p /usr/bin/python env && . env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
+				sh  '. env/bin/activate && which python && pip install flask &&  FLASK_APP=task.py flask run && sleep 5000'
 			}
 		}
 		stage('Deploy') {
