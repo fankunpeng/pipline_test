@@ -1,12 +1,12 @@
 pipeline {
 	agent {
-		docker { image 'fan:v2' }
+		docker { image 'node:7-alpine' }
 	}
  
 stages {
 	stage('Test') {
 		steps {
-			sh 'hostname'
+			sh 'node --version'
 		}
 	}
 	}
