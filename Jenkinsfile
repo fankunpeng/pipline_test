@@ -3,10 +3,10 @@ pipeline {
 	stages {
 		stage('Test') {
 			steps {
-				sh 'g++ hello.cpp'
-         			sh './a.out'
-				sh 'pwd'
-				sh 'hostname'
+				sh 'python3 -m venv env'
+				sh '. env/bin/activate'
+				sh 'pip install flask'
+				sh 'FLASK_APP=task.py flask run&'
 			}
 		}
 		stage('Deploy') {
