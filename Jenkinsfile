@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 sh 'g++ hello.cpp'
+                sh 'pip install flask'
             }
         }
     }
