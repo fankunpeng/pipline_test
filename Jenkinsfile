@@ -11,6 +11,9 @@ pipeline {
 			steps {
 				sh 'pwd'
 				sh 'ls'
+				sh 'cat /etc/passwd'
+				sh 'uname -a'
+				sh 'cat /proc/version'
 				sh 'hostname'
 				sh 'hostname && pwd && hostname'
 				sh 'ls'
