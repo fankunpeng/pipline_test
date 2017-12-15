@@ -9,6 +9,9 @@ pipeline {
 			}
 
 			steps {
+				docker.image('python').inside{
+					sh 'pwd'
+				}
 				sh 'pwd'
 				sh 'ls'
 				sh 'cat /etc/passwd'
@@ -18,7 +21,6 @@ pipeline {
 				sh 'hostname && pwd && hostname'
 				sh 'ls'
 				sh 'which python3'
-				sh '/usr/local/bin/python3 -m venv env'
 			}
 		}
 	}
