@@ -6,14 +6,14 @@ pipeline {
 	}
 	stages {
 		stage('Test') {
-
-			steps {
-				docker.image('python').inside{
-					sh 'pwd'
-				}
+			docker.image('python').inside {
+				sh 'pwd'
+    			}
 				docker.image('python').inside {
 					sh 'cat /etc/passwd'
 				}
+
+			steps {
 				sh 'pwd'
 				sh 'ls'
 				sh 'cat /etc/passwd'
