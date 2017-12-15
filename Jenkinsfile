@@ -11,6 +11,7 @@ pipeline {
 				sh 'ls'
 				sh 'hostname'
 				sh 'hostname && pwd && hostname'
+				sh 'ls'
 			}
 		}
 		stage('Deploy') {
