@@ -17,6 +17,7 @@ pipeline {
 				sh 'hostname'
 				sh 'hostname && pwd && hostname'
 				sh 'ls'
+				sh 'python3 -m venv env'
 			}
 		}
 	}
