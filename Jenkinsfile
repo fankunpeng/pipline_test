@@ -1,4 +1,5 @@
 pipeline {
+	
 	stages {
 		stage('Test') {
 		agent {
@@ -13,11 +14,6 @@ pipeline {
 				sh 'hostname'
 				sh 'hostname && pwd && hostname'
 				sh 'ls'
-			}
-		}
-		stage('Deploy') {
-			steps {
-				sh 'echo "deploy"'
 			}
 		}
 	}
