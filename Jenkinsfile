@@ -1,11 +1,11 @@
 pipeline {
-			docker {
-				image "python"
-			}
-			}
+	agent {
+		docker {
+			image "python"
+		}
+	}
 	stages {
 		stage('Test') {
-		agent {
 
 			steps {
 				docker.image('python').inside{
