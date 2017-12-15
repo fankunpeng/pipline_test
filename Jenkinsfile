@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'gcc -v'
+                sh 'g++ hello.cpp'
             }
         }
     }
