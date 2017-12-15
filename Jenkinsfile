@@ -10,8 +10,7 @@ pipeline {
 				sh 'pwd'
 				sh 'ls'
 				sh 'hostname'
-				sh 'python3 -m venv env'
-				sh '. env/bin/activate && hostname'
+				sh 'hostname && pwd && hostname'
 			}
 		}
 		stage('Deploy') {
