@@ -6,7 +6,7 @@ app = Flask(__name__)
 # test
 @app.route('/')
 def hello_world():
-    return json.dumps('in master')
+    return json.dumps('again in master')
 
 
 if __name__ == '__main__':
