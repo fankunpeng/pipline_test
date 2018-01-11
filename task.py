@@ -1,15 +1,12 @@
 # -*- coding:utf8 -*-
 from flask import Flask
-import datetime
 import json
 app = Flask(__name__)
 
 # test
 @app.route('/')
 def hello_world():
-    now = datetime.datetime.now()
-    now = json.dumps(now)
-    return 'Hello World! {}'.format(now)
+    return json.dumps('hello world hello everyone')
 
 
 if __name__ == '__main__':
